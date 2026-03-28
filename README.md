@@ -30,7 +30,7 @@ For a project with 50+ dependencies, manually checking each one takes hours. spr
 ### Build
 
 ```bash
-git clone https://github.com/aeob/spring-migrate.git
+git clone https://github.com/Ayoubbooob/spring-migrate.git
 cd spring-migrate
 mvn clean package -DskipTests
 ```

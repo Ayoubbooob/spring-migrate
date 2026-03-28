@@ -89,7 +89,7 @@ public final class Banner {
     public static void printFooter() {
         System.out.println();
         System.out.println(DIM + "  ─────────────────────────────────────────" + RESET);
-        System.out.println(DIM + "  spring-migrate v1.0.0  github.com/aeob" + RESET);
+        System.out.println(DIM + "  spring-migrate v1.0.0  https://github.com/Ayoubbooob/spring-migrate" + RESET);
         System.out.println();
     }
 
