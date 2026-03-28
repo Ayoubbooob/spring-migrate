@@ -1,0 +1,35 @@
+# ===== Build output =====
+target/
+*.jar
+*.class
+
+# ===== Maven =====
+dependency-reduced-pom.xml
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# ===== IDE =====
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Personal files =====
+medium-article.txt
+src/main/java/com/aeob/springmigrate/testcmd.txt
+
+# ===== Misplaced test project (should be in test-projects/) =====
+src/main/java/com/aeob/springmigrate/test_spring_migrate/
+

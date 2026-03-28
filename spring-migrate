@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# spring-migrate CLI wrapper
+# This script allows you to run: spring-migrate analyze --to 3.2.2
+# Instead of: java -jar /path/to/spring-migrate.jar analyze --to 3.2.2
+
+# Resolve the real path of this script (following symlinks)
+SOURCE="${BASH_SOURCE[0]}"
+while [ -L "$SOURCE" ]; do
+    DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+    SOURCE="$(readlink "$SOURCE")"
+    [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+SCRIPT_DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+
+# Path to the JAR file
+JAR_PATH="$SCRIPT_DIR/target/spring-migrate-1.0-SNAPSHOT.jar"
+
+# Check if JAR exists
+if [ ! -f "$JAR_PATH" ]; then
+    echo "Error: spring-migrate JAR not found at $JAR_PATH"
+    echo "Please run: mvn clean package"
+    exit 1
+fi
+
+# Run the JAR with all arguments passed to this script
+java -jar "$JAR_PATH" "$@"
+

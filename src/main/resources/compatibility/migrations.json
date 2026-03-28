@@ -1,0 +1,125 @@
+{
+  "migrations": {
+    "2.x-to-3.x": {
+      "description": "Spring Boot 2.x to 3.x migration rules",
+      "javaMinVersion": "17",
+      "dependencies": {
+        "springfox-swagger2": {
+          "status": "REMOVED",
+          "replacement": {
+            "groupId": "org.springdoc",
+            "artifactId": "springdoc-openapi-starter-webmvc-ui",
+            "version": "2.3.0"
+          },
+          "notes": "Springfox is abandoned. Use SpringDoc OpenAPI instead."
+        },
+        "springfox-swagger-ui": {
+          "status": "REMOVED",
+          "replacement": {
+            "groupId": "org.springdoc",
+            "artifactId": "springdoc-openapi-starter-webmvc-ui",
+            "version": "2.3.0"
+          },
+          "notes": "Springfox is abandoned. Use SpringDoc OpenAPI instead."
+        },
+        "javax.servlet-api": {
+          "status": "REPLACED",
+          "replacement": {
+            "groupId": "jakarta.servlet",
+            "artifactId": "jakarta.servlet-api",
+            "version": "6.0.0"
+          },
+          "notes": "javax.* namespace moved to jakarta.* in Spring Boot 3"
+        },
+        "javax.persistence-api": {
+          "status": "REPLACED",
+          "replacement": {
+            "groupId": "jakarta.persistence",
+            "artifactId": "jakarta.persistence-api",
+            "version": "3.1.0"
+          },
+          "notes": "javax.* namespace moved to jakarta.* in Spring Boot 3"
+        },
+        "javax.validation-api": {
+          "status": "REPLACED",
+          "replacement": {
+            "groupId": "jakarta.validation",
+            "artifactId": "jakarta.validation-api",
+            "version": "3.0.2"
+          },
+          "notes": "javax.* namespace moved to jakarta.* in Spring Boot 3"
+        },
+        "validation-api": {
+          "status": "REPLACED",
+          "replacement": {
+            "groupId": "jakarta.validation",
+            "artifactId": "jakarta.validation-api",
+            "version": "3.0.2"
+          },
+          "notes": "javax.validation:validation-api moved to jakarta.* in Spring Boot 3"
+        },
+        "hibernate-validator": {
+          "status": "NEEDS_UPDATE",
+          "minVersion": "8.0.0.Final",
+          "notes": "Version 8.x required for Jakarta EE 10 compatibility"
+        },
+        "lombok": {
+          "status": "NEEDS_UPDATE",
+          "minVersion": "1.18.30",
+          "notes": "Older versions have issues with Java 17+"
+        },
+        "mapstruct": {
+          "status": "NEEDS_UPDATE",
+          "minVersion": "1.5.5.Final",
+          "notes": "Required for Java 17 support"
+        },
+        "springdoc-openapi-ui": {
+          "status": "REPLACED",
+          "replacement": {
+            "groupId": "org.springdoc",
+            "artifactId": "springdoc-openapi-starter-webmvc-ui",
+            "version": "2.3.0"
+          },
+          "notes": "SpringDoc 1.x replaced with 2.x for Spring Boot 3"
+        },
+        "mysql-connector-java": {
+          "status": "REPLACED",
+          "replacement": {
+            "groupId": "com.mysql",
+            "artifactId": "mysql-connector-j",
+            "version": "8.2.0"
+          },
+          "notes": "MySQL connector renamed and moved to new groupId"
+        },
+        "querydsl-jpa": {
+          "status": "NEEDS_UPDATE",
+          "minVersion": "5.0.0",
+          "notes": "Version 5.x required for Jakarta namespace"
+        },
+        "ehcache": {
+          "status": "NEEDS_UPDATE",
+          "minVersion": "3.10.8",
+          "notes": "EhCache 3.x required for Spring Boot 3"
+        }
+      },
+      "javaxToJakarta": {
+        "javax.servlet": "jakarta.servlet",
+        "javax.persistence": "jakarta.persistence",
+        "javax.validation": "jakarta.validation",
+        "javax.annotation": "jakarta.annotation",
+        "javax.transaction": "jakarta.transaction",
+        "javax.mail": "jakarta.mail",
+        "javax.activation": "jakarta.activation",
+        "javax.xml.bind": "jakarta.xml.bind",
+        "javax.ws.rs": "jakarta.ws.rs"
+      }
+    },
+    "3.x-to-4.x": {
+      "description": "Spring Boot 3.x to 4.x migration rules (placeholder)",
+      "javaMinVersion": "21",
+      "dependencies": {},
+      "javaxToJakarta": {}
+    }
+  }
+}
+
