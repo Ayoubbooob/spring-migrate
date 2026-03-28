@@ -1,0 +1,18 @@
+# Code Owners
+# These users will be automatically requested for review on PRs
+
+# Default: all PRs go to project owner
+* @Ayoubbooob
+
+# Detection engine
+src/main/java/com/aeob/springmigrate/detector/ @Ayoubbooob
+
+# Dependency analysis
+src/main/java/com/aeob/springmigrate/dependency/ @Ayoubbooob
+
+# Compatibility rules — open to community contributions
+src/main/resources/compatibility/ @Ayoubbooob
+
+# CLI layer
+src/main/java/com/aeob/springmigrate/cli/ @Ayoubbooob
+

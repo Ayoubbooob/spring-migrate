@@ -1,5 +1,10 @@
 # spring-migrate
 
+[![Build & Test](https://github.com/Ayoubbooob/spring-migrate/actions/workflows/build.yml/badge.svg)](https://github.com/Ayoubbooob/spring-migrate/actions/workflows/build.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Java 17+](https://img.shields.io/badge/Java-17%2B-blue.svg)](https://openjdk.org/projects/jdk/17/)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 A CLI tool that analyzes Spring Boot projects before migration — so you know exactly what will break, what needs updating, and what's safe.
 
 Built for developers who want informed migrations, not blind upgrades.
@@ -240,27 +245,28 @@ See [ROADMAP.md](ROADMAP.md) for the full breakdown.
 
 ## Contributing
 
-Contributions are welcome. The easiest way to start:
+Contributions are welcome — whether it's adding compatibility rules, reporting edge cases, or improving the engine.
+
+👉 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide (setup, PR process, branch naming, commit conventions).
+
+The easiest way to start:
 
 1. **Add compatibility rules** — If you've hit a dependency issue during a Spring Boot migration, add a rule to `src/main/resources/compatibility/migrations.json`.
 2. **Report edge cases** — Unusual POM structures, detection failures, or incorrect classifications.
 3. **Submit test projects** — Real-world `pom.xml` files that expose edge cases (see `test-projects/`).
 
-### Development
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before participating.
 
-```bash
-# Build
-mvn clean package
+For security vulnerabilities, see [SECURITY.md](SECURITY.md).
 
-# Run tests
-mvn test
+---
 
-# Run directly
-java -jar target/spring-migrate-1.0-SNAPSHOT.jar analyze --to 3.2.2
-```
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a detailed list of changes per version.
 
 ---
 
 ## License
 
-MIT
+[MIT](LICENSE)
