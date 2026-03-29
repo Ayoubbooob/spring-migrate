@@ -1,13 +1,23 @@
+<div align="center">
+
+<img src="assets/logo.svg" alt="spring-migrate logo" width="200"/>
+
+<br/>
+
 # spring-migrate
+
+**Spring Boot Migration Assistant**
+
+Analyze your Spring Boot project before migration — know exactly what will break, what needs updating, and what's safe.
 
 [![Build & Test](https://github.com/Ayoubbooob/spring-migrate/actions/workflows/build.yml/badge.svg)](https://github.com/Ayoubbooob/spring-migrate/actions/workflows/build.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Java 17+](https://img.shields.io/badge/Java-17%2B-blue.svg)](https://openjdk.org/projects/jdk/17/)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-A CLI tool that analyzes Spring Boot projects before migration — so you know exactly what will break, what needs updating, and what's safe.
+[Getting Started](#quick-start) · [Usage](#usage) · [Architecture](#architecture) · [Roadmap](ROADMAP.md) · [Contributing](CONTRIBUTING.md)
 
-Built for developers who want informed migrations, not blind upgrades.
+</div>
 
 ---
 
@@ -129,7 +139,11 @@ Exit codes are designed for CI/CD pipelines.
 
 ## Architecture
 
-![spring-migrate architecture](/assets/architecture.png "San Juan Mountains")
+<div align="center">
+
+![spring-migrate architecture](assets/architecture.png)
+
+</div>
 
 Each layer has a single responsibility. Engines can be improved or replaced independently.
 
